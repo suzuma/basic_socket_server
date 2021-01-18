@@ -6,7 +6,7 @@ require('dotenv').config();  //leemos la variable de entorno
 const app =express();
 
 //crear servidor NODE
-const server =require('http').createServer();
+const server =require('http').createServer(app);
 module.exports.io=require('socket.io')(server);
 require('./sockets/socket');
 
