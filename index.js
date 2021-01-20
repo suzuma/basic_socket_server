@@ -3,11 +3,11 @@ const path=require('path');
 require('dotenv').config();  //leemos la variable de entorno
 
 //Aplicacion de Express
-const app =express();
+const app = express();
 
 //crear servidor NODE
-const server =require('http').createServer();
-module.exports.io=require('socket.io')(server);
+const server = require('http').createServer(app);
+module.exports.io = require('socket.io')(server);
 require('./sockets/socket');
 
 
